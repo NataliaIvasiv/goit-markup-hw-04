@@ -3,7 +3,7 @@
 *::after {
   box-sizing: border-box;
 }
-h1, h2, h3, p {
+h1, h2, h3, h4 p {
 	margin-top: 0;
 	margin-bottom: 0;
 }
@@ -74,6 +74,9 @@ font-family: Raleway, sans-serif;
 }
 .logo{
 text-decoration: none;
+transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: background-color;
 }
 .nav-title{
     color: #2E2F42;
@@ -83,8 +86,11 @@ text-decoration: none;
     letter-spacing: 0.32px;
     text-decoration: none;
     padding: 24px 0;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: background-color;
 }
-.nav-title:active, 
+/* .nav-title:active,  */
 .nav-title:focus,
 .nav-title:hover,
 .address-text:active,
@@ -95,12 +101,24 @@ text-decoration: none;
 {
     color: #404BBF;
 }
+
+.nav-title:hover::after{
+    content: "";
+    display: flex;
+gap: 20px;
+height: 4px;
+flex-shrink: 0;
+border-radius: 2px;
+background-color: #404BBF;
+}
 .address-text{
 color: #434455;
     line-height: 1.5;
     letter-spacing: 0.32px;
     text-decoration: none;
-    
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: background-color;
 }
 .contacts{
     font-style: normal;
@@ -109,9 +127,11 @@ color: #434455;
 /* -------------main-page--------- */
 .main-page{
     text-align: center;
-    background-color: #2E2F42;
+    background-image: linear-gradient(to bottom,rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(/images/people-office.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 1440px;
     padding: 188px 0;
-    
 height: 600px;
 flex-shrink: 0;
 
@@ -120,32 +140,33 @@ flex-shrink: 0;
     color: #FFF;
     text-align: center;
     font-weight: 700;
-        font-size: 56px;
-        line-height: 1.07;
-        letter-spacing: 1.12px;
-        /* margin-right: 472px; 
-        margin-left:  472px; */
-        margin: auto;
-        margin-bottom: 48px;
-        max-width: 496px;
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 1.12px;        
+    margin: auto;
+    margin-bottom: 48px;
+    max-width: 496px;
 }
 .button-order-serv{
     color: #FFF;
     font-family: Roboto, sans-serif;
     font-style: normal;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 1.5;
-        letter-spacing: 0.64px;
-        cursor: pointer;
-            background-color: #4D5AE5;
-            display: block;
-            min-width: 169px;
-            height: 56px;
-            border: none;
-padding: 16px 32px;
-margin: auto;
-            border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.64px;
+    cursor: pointer;
+    background-color: #4D5AE5;
+    display: block;
+    min-width: 169px;
+    height: 56px;
+    border: none;
+    padding: 16px 32px;
+    margin: auto;
+    border-radius: 4px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: background-color;
 }
 .button-order-serv:hover,
 .button-order-serv:focus
@@ -163,6 +184,19 @@ background: #404BBF;
 }
 .features-item{
     width: calc((100% - (3 * 24px)) / 4);
+    }
+    .rectangle{
+        width: 264px;
+height: 112px;
+flex-shrink: 0;
+border-radius: 4px;
+border: 1px solid #8E8F99;
+background: #F4F4FD;
+margin-bottom: 8px;
+padding: 24px 100px;
+    }
+    .rectangle-icon{
+        flex-shrink: 0;
     }
  .features-title{
     color: #2E2F42;
@@ -192,9 +226,6 @@ background: #404BBF;
     overflow: hidden;
    }
 
-/* .section{
-padding: 120px 156px;
-} */
 
 /* --------our-team-section-------- */
 .our-team-section{
@@ -239,11 +270,37 @@ width: calc((100% - (3 * 24px)) / 4);
 
 .name-container{
     padding: 32px 0;
+
 }
 li {
     list-style: none;
 }
+.ellipse{
+    background-color: #4D5AE5;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 12px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: background-color;
+}
+.ellipse:hover,
+.ellipse:focus{
+    background-color: #404BBF;
+}
+.team-icon{
+    fill: #F4F4FD;
+    
+}
+.our-team-social-links{
+    display: flex;
+    gap: 24px;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 8px;
 
+}
 
 /* ------our-portfolio-section------- */
 .our-portfolio-section{
@@ -267,8 +324,19 @@ li {
   margin: 0;
 }
 .our-portfolio-item{
+    /* position: relative; */
     margin: 0;
     width: calc((100% - (2 * 24px)) / 3);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: background-color, box-sadow, border;
+    overflow: hidden;
+}
+.our-portfolio-item:hover,
+.our-portfolio-item:focus{
+    border: 1px solid  #F4F4FD;
+background-color: #FFF;
+box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 .our-portfolio-title {
     color: #2E2F42;
@@ -288,13 +356,41 @@ li {
     border-top: none;
     padding: 32px 16px;
 }
+.overlay{
+    position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4D5AE5;
+padding: 40px 32px 160px 32px;
+  transform: translatey(150%);
+  transition: transform 250ms ease-in-out;
+}
+.our-portfolio-item:hover .overlay {
+    transform: translatey(0);
+  }
+.card{
+position: relative;
+}
+.overlay-text{
+    color: #F4F4FD;
+}
 
+
+
+
+  
 /* -------footer---------------------- */
 .foot{
     background: #2E2F42;
     font-family: Raleway,
         sans-serif;
     color: #F4F4FD;
+}
+.footer-container{
+display: flex;
+gap: 120px
 }
 .logo-studio-foot{
 color: #f4f4fd;
@@ -315,4 +411,32 @@ font-family: Roboto, sans-serif;
 .logo-foot{
     display: inline-block;
     margin-bottom: 16px;
+}
+.social-media-container-footer{
+    margin-top: 0;
+    gap: 16px;
+}
+.social-media{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.footer-social-links{
+    display: flex;
+    gap: 16px;
+    
+    margin-top: 16px;
+}
+.footer-ellipse{
+    background-color: #4D5AE5;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 8px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: background-color;
+}
+.footer-ellipse:hover,
+.footer-ellipse:focus{
+    background-color: #31D0AA;
 }
