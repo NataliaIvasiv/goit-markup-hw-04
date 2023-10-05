@@ -490,3 +490,6 @@ margin-bottom: 16px;
 .footer-ellipse-link:focus{
     background-color: #31D0AA;
 }
+.footer-ellipse:focus{
+    background-color: #31D0AA;
+}
