@@ -128,7 +128,7 @@ background-color: #404BBF;
     bottom: -1px;
 height: 4px;
 position: absolute;
-
+width: 100%;
 border-radius: 2px;
 background-color: #404BBF;
 }
